@@ -11,6 +11,10 @@ __checkEmptyFolder()
     fi
 }
 
+# GIT
+mkdir -p $HOME/.git
+ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitconfig $HOME
+
 # PHP
 mkdir -p $HOME/.composer
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/languages/php/composer.json $HOME/.composer

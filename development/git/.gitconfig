@@ -1,0 +1,10 @@
+[alias]
+        cm = commit
+        st = status
+        br = branch
+        ch = checkout
+        ds = diff --staged
+        df = diff
+        log-nice = log --graph --decorate --pretty=oneline --abbrev-commit
+        demodemo = status
+
