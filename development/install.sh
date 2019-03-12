@@ -12,21 +12,25 @@ __checkEmptyFolder()
 }
 
 # GIT
+echo 'Installing git features...'
 mkdir -p $HOME/.git
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitmessage $HOME
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitignore_global $HOME
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitconfig $HOME
 
 # TERMINAL
+echo 'Installing nano terminal configuration...'
 mkdir -p $HOME/.config/nano
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/terminal/nano/gitcommit.nanorc $HOME/.config/nano
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/terminal/nano/.nanorc $HOME
 
 # PHP
+echo 'Installing composer configuration...'
 mkdir -p $HOME/.composer
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/languages/php/composer.json $HOME/.composer
 
-# Register exposrts
+# Register exports
+echo 'Registering export vars...'
 __checkEmptyFolder terminal/_exports
 if [ "$?" -eq "0" ]; then
     for exportsToRegister in ${DOTFILES_DEVELOPMENT_PATH}/terminal/_exports/*; do
@@ -34,10 +38,11 @@ if [ "$?" -eq "0" ]; then
     done
 fi
 
-# Register aliasses
-__checkEmptyFolder terminal/_aliasses
+# Register aliases
+echo 'Registering aliases...'
+__checkEmptyFolder terminal/_aliases
 if [ "$?" -eq "0" ]; then
-    for aliassesToRegister in ${DOTFILES_DEVELOPMENT_PATH}/terminal/_aliasses/*; do
-        source $aliassesToRegister;
+    for aliasesToRegister in ${DOTFILES_DEVELOPMENT_PATH}/terminal/_aliases/*; do
+        source $aliasesToRegister;
     done
 fi

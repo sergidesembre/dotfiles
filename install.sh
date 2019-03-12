@@ -5,6 +5,5 @@ DOTFILES_PATH=$HOME/.dotfiles
 #---------------------#
 #      LANGUAGES      #
 #---------------------#
-
-echo 'Installing language development tools...';
+echo 'Install development tools:';
 source ${DOTFILES_PATH}/development/install.sh
