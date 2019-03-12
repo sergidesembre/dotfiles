@@ -16,4 +16,6 @@
         log-nice = log --graph --decorate --pretty=oneline --abbrev-commit
 
 [core]
+	ui = true
+	editor = nano
 	excludesfile = ~/.gitignore_global
