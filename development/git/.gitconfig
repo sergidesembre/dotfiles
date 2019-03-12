@@ -1,6 +1,7 @@
 [user]
 	name = Sergi Desembre
 	email = sergi.desembre@gmail.com
+        signingkey = AB19D4C3
 
 [commit]
         template = ~/.gitmessage
@@ -13,3 +14,6 @@
         ds = diff --staged
         df = diff
         log-nice = log --graph --decorate --pretty=oneline --abbrev-commit
+
+[core]
+	excludesfile = ~/.gitignore_global
