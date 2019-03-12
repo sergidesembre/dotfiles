@@ -13,9 +13,14 @@ __checkEmptyFolder()
 
 # GIT
 mkdir -p $HOME/.git
-ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitconfig $HOME
-ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitignore_global $HOME
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitmessage $HOME
+ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitignore_global $HOME
+ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitconfig $HOME
+
+# TERMINAL
+mkdir -p $HOME/.config/nano
+ln -sf ${DOTFILES_DEVELOPMENT_PATH}/terminal/nano/gitcommit.nanorc $HOME/.config/nano
+ln -sf ${DOTFILES_DEVELOPMENT_PATH}/terminal/nano/.nanorc $HOME
 
 # PHP
 mkdir -p $HOME/.composer
