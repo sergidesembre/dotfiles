@@ -1,3 +1,10 @@
+[user]
+	name = Sergi Desembre
+	email = sergi.desembre@gmail.com
+
+[commit]
+        template = ~/.gitmessage
+
 [alias]
         cm = commit
         st = status

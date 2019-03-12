@@ -15,6 +15,7 @@ __checkEmptyFolder()
 mkdir -p $HOME/.git
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitconfig $HOME
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitignore_global $HOME
+ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitmessage $HOME
 
 # PHP
 mkdir -p $HOME/.composer
