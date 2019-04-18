@@ -8,7 +8,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Jumps
-alias code='cd ~/Code'
+alias work='cd ~/Code/work'
+alias me='cd ~/Code/me'
 alias dotfiles='cd ~/.dotfiles'
 
 # Miscellaneous getters
