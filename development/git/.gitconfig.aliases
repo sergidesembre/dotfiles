@@ -1,0 +1,11 @@
+[alias]
+    cm = commit
+    st = status
+    br = branch
+    ch = checkout
+    ds = diff --staged
+    df = diff
+    ls = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+    # With git >= 1.8.3 you can use %C(auto) for the branch decorator (%d)
+    log-me = !UN=$(git config user.name)&& git log --author="\"$UN\"" --pretty=format:'%h %cd %s' --date=short
+	log-nice  = log --graph --decorate --pretty=oneline --abbrev-commit

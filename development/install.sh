@@ -15,6 +15,7 @@ __checkEmptyFolder()
 echo 'Installing git features...'
 mkdir -p $HOME/.git
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitmessage $HOME
+ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitconfig.aliases $HOME
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitignore_global $HOME
 ln -sf ${DOTFILES_DEVELOPMENT_PATH}/git/.gitconfig $HOME
 

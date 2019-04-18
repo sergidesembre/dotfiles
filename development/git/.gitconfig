@@ -45,20 +45,6 @@
 [github]
     user = sergidesembre
 
-[alias]
-    cm = commit
-    st = status
-    br = branch
-    ps = push origin
-    ch = checkout
-    ds = diff --staged
-    df = diff
-    feature = !sh -c 'git checkout -b feature/$1' -
-    fix = !sh -c 'git checkout -b hotfix/$1' -
-    bug = !sh -c 'git checkout -b bugfix/$1' -
-    prev = check-ref-format --branch @{-1}
-    log-nice = log --graph --decorate --pretty=oneline --abbrev-commit
-
 [push]
     default = current
 
@@ -89,3 +75,6 @@
 
 [apply]
     whitespace = fix
+
+[include]
+    path = ~/.gitconfig.aliases
