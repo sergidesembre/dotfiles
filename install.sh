@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DOTFILES_PATH=$HOME/.dotfiles
 DOTFILES_GIT_PATH=${DOTFILES_PATH}/git
@@ -25,7 +25,7 @@ ln -sf ${DOTFILES_GIT_PATH}/.gitconfig $HOME
 
 # Generate SSH Keys
 for sshKeysToRegister in ${DOTFILES_GIT_PATH}/ssh-hosts/*; do
-    SSH_NAME="${${sshKeysToRegister##*/}%.*}"
+    SSH_NAME="$(echo ${sshKeysToRegister} | rev | cut -d'/' -f1 | rev | cut -d'.' -f1)";
     ssh-keygen -t rsa -C '${SSH_NAME}' -f ~/.ssh/${SSH_NAME} -q -N ''
-    cat $sshKeysToRegister >> ~/.ssh/config1;
+    cat $sshKeysToRegister >> ~/.ssh/config;
 done
