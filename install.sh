@@ -23,10 +23,9 @@ ln -sf ${DOTFILES_GIT_PATH}/.gitconfig.aliases $HOME
 ln -sf ${DOTFILES_GIT_PATH}/.gitignore_global $HOME
 ln -sf ${DOTFILES_GIT_PATH}/.gitconfig $HOME
 
-echo 'Generating GitHub SSH key'
-ssh-keygen -t rsa -C 'github' -f ~/.ssh/github -q -N ''
-echo 'Host github.com\n  HostName github.com\n  IdentityFile ~/.ssh/github' >> ~/.ssh/config
-
-echo 'Generating Bitbucket SSH key'
-ssh-keygen -t rsa -C 'bitbucket' -f ~/.ssh/bitbucket -q -N ''
-echo 'Host bitbucket.org\n  HostName bitbucket.org\n  IdentityFile ~/.ssh/bitbucket' >> ~/.ssh/config
+# Generate SSH Keys
+for sshKeysToRegister in ${DOTFILES_GIT_PATH}/ssh-hosts/*; do
+    SSH_NAME="${${sshKeysToRegister##*/}%.*}"
+    ssh-keygen -t rsa -C '${SSH_NAME}' -f ~/.ssh/${SSH_NAME} -q -N ''
+    cat $sshKeysToRegister >> ~/.ssh/config1;
+done
