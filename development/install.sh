@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DOTFILES_DEVELOPMENT_PATH=$HOME/.dotfiles/development
 
@@ -33,9 +33,12 @@ fi
 
 # Register aliases
 echo 'Registering aliases...'
+mkdir -p $HOME/.aliases
 __checkEmptyFolder terminal/_aliases
 if [ "$?" -eq "0" ]; then
     for aliasesToRegister in ${DOTFILES_DEVELOPMENT_PATH}/terminal/_aliases/*; do
-        source $aliasesToRegister;
+        ln -sf $aliasesToRegister $HOME/.aliases
+       # echo $aliasesToRegister;
+       # source $aliasesToRegister;
     done
 fi

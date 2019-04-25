@@ -1,0 +1,4 @@
+# Aliases
+source ~/.aliases/general
+source ~/.aliases/php
+source ~/.aliases/docker

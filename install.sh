@@ -29,3 +29,9 @@ for sshKeysToRegister in ${DOTFILES_GIT_PATH}/ssh-hosts/*; do
     ssh-keygen -t rsa -C '${SSH_NAME}' -f ~/.ssh/${SSH_NAME} -q -N ''
     cat $sshKeysToRegister >> ~/.ssh/config;
 done
+
+#---------------------#
+#      TERMINALS      #
+#---------------------#
+echo 'Installing custom terminals...'
+source ${DOTFILES_PATH}/terminal/install.sh
