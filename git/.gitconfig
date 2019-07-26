@@ -1,7 +1,7 @@
 [user]
     name = Sergi Desembre
     email = sergi.desembre@gmail.com
-    signingkey = 45BE867D
+	signingkey = C8F1EE537D9C96BF0B31904BD85BB8920D893F9D
 
 [color]
     ui = auto
@@ -78,3 +78,5 @@
 
 [include]
     path = ~/.gitconfig.aliases
+[gpg]
+	program = gpg
