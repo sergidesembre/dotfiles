@@ -14,14 +14,20 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 [[ -e $HOME/.zsh_profile ]] && emulate sh -c 'source $HOME/.zsh_profile'
 
 
-source ~/.custom/_config_zsh
-source ~/.config/zsh/.init_aliases
+#source ~/.custom/_config_zsh
+#source ~/.config/zsh/.init_aliases
 
 # Load aliases
 ALIASES_PATH=$HOME/.dotfiles/shells/_aliases
 
 if [ -f ${ALIASES_PATH}/general ]; then
     source ${ALIASES_PATH}/general
+else
+    print "404: file ${ALIASES_PATH} not found"
+fi
+
+if [ -f ${ALIASES_PATH}/docker ]; then
+    source ${ALIASES_PATH}/docker
 else
     print "404: file ${ALIASES_PATH} not found"
 fi
