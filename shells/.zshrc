@@ -1,6 +1,9 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+SHELLS_PATH=$HOME/.dotfiles/shells
+
 ZSH_THEME="oxide"
+ZSH_CUSTOM=$SHELLS_PATH/zsh_custom
 HIST_STAMPS="yyyy/mm/dd"
 
 plugins=(git zsh-autosuggestions tmux)
