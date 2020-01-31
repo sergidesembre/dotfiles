@@ -6,7 +6,7 @@ ZSH_THEME="oxide"
 ZSH_CUSTOM=$SHELLS_PATH/zsh_custom
 HIST_STAMPS="yyyy/mm/dd"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting tmux)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting tmux docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
