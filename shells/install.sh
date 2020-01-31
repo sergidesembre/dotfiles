@@ -1,7 +1,6 @@
 #!/bin/bash
 
 DOTFILES_SHELLS_PATH=$HOME/.dotfiles/shells
-ZSH_PLUGINS=$HOME/.oh-my-zsh/custom/plugins
 
 # INSTALL ZSH SHELL
 sudo apt install zsh

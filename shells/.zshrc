@@ -6,14 +6,14 @@ ZSH_THEME="oxide"
 ZSH_CUSTOM=$SHELLS_PATH/zsh_custom
 HIST_STAMPS="yyyy/mm/dd"
 
-plugins=(git zsh-autosuggestions tmux)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting tmux)
 
 source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # Load .profile
-[[ -e $HOME/.zsh_profile ]] && emulate sh -c 'source $HOME/.zsh_profile'
+#[[ -e $HOME/.zsh_profile ]] && emulate sh -c 'source $HOME/.zsh_profile'
 
 # Load aliases
 ALIASES_PATH=$HOME/.dotfiles/shells/_aliases
