@@ -23,9 +23,3 @@ if [ -f ${ALIASES_PATH}/general ]; then
 else
     print "404: file ${ALIASES_PATH} not found"
 fi
-
-if [ -f ${ALIASES_PATH}/docker ]; then
-    source ${ALIASES_PATH}/docker
-else
-    print "404: file ${ALIASES_PATH} not found"
-fi
