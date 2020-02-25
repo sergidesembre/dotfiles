@@ -7,7 +7,7 @@ sudo apt install snapd
 # --------------------------------
 #        development tools
 # --------------------------------
-sudo snap install phpstorm
+sudo snap install phpstorm -classic -edge
 sudo snap install pycharm-community
 sudo snap install postman
 sudo snap install notepad-plus-plus
