@@ -4,6 +4,7 @@ alias dstop=dstop
 alias dremove=dremove
 alias dexec=dexec
 alias dps=dps
+alias dbomb=dbomb
 
 # Stop all containers
 function dstop() { docker stop $(docker ps -a -q); }
@@ -16,3 +17,6 @@ function dexec() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 
 # Get container process pretty
 function dps() { docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}"; }
+
+# Remove all container, volumes, networks, images and default local storage disk (thanks 1ma <https://github.com/1ma>)
+function dbomb() { docker rm -f $(docker ps -q); docker volume rm $(docker volumes ls -q); docker network rm $(docker network ls -q); docker rmi $(docker images -q); sudo service docker stop; sudo rm -rf /var/lib/docker; sudo service docker start; }
