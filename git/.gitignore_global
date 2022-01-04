@@ -3,6 +3,7 @@
 
 # Custom
 .no-commit
+/vendor/
 
 # Text editors
 *.swp
