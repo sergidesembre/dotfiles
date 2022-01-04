@@ -1,6 +1,7 @@
 # Subject line (try to keep under 50 characters)
 
 
+# Types of issue: FEATURE|BUG|FIXED-IN|REVIEW
 # Multi-line description of commit,
 [TYPE ISSUE]: Feel free to be detailed.
 

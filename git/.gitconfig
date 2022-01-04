@@ -1,8 +1,3 @@
-[user]
-    name = Sergi Desembre
-    email = sergi.desembre@gmail.com
-	signingkey = BB76DC358B5DD089BC26D885A9065388AA357C44
-
 [color]
     ui = auto
     branch = auto
@@ -34,7 +29,7 @@
     trustctime = false
     precomposeunicode = false
     whitespace = trailing-space,space-before-tab
-    excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore.global
 
 [help]
     autocorrect = 1
@@ -50,7 +45,7 @@
 
 [commit]
     template = ~/.gitmessage
-    gpgsign = true
+    gpgsign = false
 
 [sendemail]
     smtpencryption = tls
@@ -78,5 +73,12 @@
 
 [include]
     path = ~/.gitconfig.aliases
+
 [gpg]
-	program = gpg
+    program = gpg2
+
+[include]
+    path = ~/Code/me/.gitconfig.profile
+
+[includeIf "gitdir:~/Code/work/"]
+    path = ~/Code/work/.gitconfig.profile
