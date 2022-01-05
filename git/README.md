@@ -61,4 +61,16 @@ ln -sf ~/.dotfiles/git/git.hosts ~/.ssh/git.hosts
 ```
 
 ## How to use GPG
-@TODO: Pending to complete
+This part is not required but is highly recommended.
+I write here some useful GPG commands if I will like generate new GPG key. 
+Generate a GPG key pair:
+```
+gpg --default-new-key-algo rsa4096 --gen-key
+```
+Use next command to list the long form of the GPG keys for which you have both a public and private key:
+```
+gpg --list-secret-keys --keyid-format=long
+```
+Remember to sign commits with GPG you need change value from `gpgsign` to `true` from `.gitconfig` file.
+
+Here I can find more info about this: [https://docs.github.com/en/authentication/managing-commit-signature-verification](https://docs.github.com/en/authentication/managing-commit-signature-verification)
