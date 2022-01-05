@@ -1,0 +1,87 @@
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    commit = green bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+
+[core]
+    ui = true
+    editor = nano
+    autocrlf = input
+    trustctime = false
+    precomposeunicode = false
+    whitespace = trailing-space,space-before-tab
+    excludesfile = ~/.gitignore.global
+
+[help]
+    autocorrect = 1
+
+[apply]
+    whitespace = fix
+
+[github]
+    user = sergidesembre
+
+[push]
+    default = current
+
+[commit]
+    template = ~/.gitmessage
+    gpgsign = false
+
+[sendemail]
+    smtpencryption = tls
+    smtpserver = smtp.gmail.com
+    smtpserverport = 587
+    suppresscc = self
+    smtpuser = sergi.desembre+git@gmail.com
+
+[gitflow "branch"]
+    master = master
+
+[gitflow "prefix"]
+    feature = feature/
+    release = release/
+    hotfix = hotfix/
+    bugfix = bugfix/
+
+[pager]
+    diff = diff-highlight | less
+    log = diff-highlight | less
+    show = diff-highlight | less
+
+[apply]
+    whitespace = fix
+
+[include]
+    path = ~/.gitconfig.aliases
+
+[gpg]
+    program = gpg2
+
+[include]
+    path = ~/Code/me/.gitconfig.profile
+
+[includeIf "gitdir:~/Code/work/"]
+    path = ~/Code/work/.gitconfig.profile
+
+# [includeIf "gitdir:~/.dotfiles/"]
+#     path = ~/.dotfiles/git/profiles/gitconfig.github.profile

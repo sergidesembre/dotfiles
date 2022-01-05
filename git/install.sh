@@ -21,7 +21,7 @@ install_git()
 set_custom_configuration()
 {
   if ask_question 'Set custom git configuration'; then
-    ln -sf ~/.dotfiles/git/gitconfig ~/.gitconfig
+    ln -sf $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
     echo -e "\e[1;42m OK \e[0m"
   fi
 }
@@ -29,7 +29,7 @@ set_custom_configuration()
 add_custom_aliases()
 {
   if ask_question 'Add custom aliases'; then
-    ln -sf ~/.dotfiles/git/gitconfig.aliases ~/.gitconfig.aliases
+    ln -sf $HOME/.dotfiles/git/gitconfig.aliases $HOME/.gitconfig.aliases
     echo -e "\e[1;42m OK \e[0m"
   fi
 }
@@ -37,7 +37,7 @@ add_custom_aliases()
 add_global_ignore()
 {
   if ask_question 'Add global ignore files'; then
-    ln -sf ~/.dotfiles/git/gitignore.global ~/.gitignore.global
+    ln -sf $HOME/.dotfiles/git/gitignore.global $HOME/.gitignore.global
     echo -e "\e[1;42m OK \e[0m"
   fi
 }
@@ -45,7 +45,11 @@ add_global_ignore()
 add_custom_commit_message()
 {
   if ask_question 'Add custom commit message'; then
-    ln -sf ~/.dotfiles/git/gitmessage ~/.gitmessage
+    mkdir $HOME/.config/nano
+    ln -sf $HOME/.dotfiles/git/gitmessage $HOME/.gitmessage
+    ln -sf $HOME/.dotfiles/git/editor/nano/gitmessage.nanorc $HOME/.config/nano/gitmessage
+    echo "include $HOME/.config/nano/gitmessage" >> $HOME/.nanorc
+
     echo -e "\e[1;42m OK \e[0m"
   fi
 }
@@ -53,12 +57,12 @@ add_custom_commit_message()
 add_configuration_profile()
 {
   if ask_question 'Add configuration profile GitHub in "~/Code/me/"'; then
-    ln -sf ~/.dotfiles/git/profiles/gitconfig.github.profile ~/Code/me/.gitconfig.profile
+    ln -sf $HOME/.dotfiles/git/profiles/gitconfig.github.profile $HOME/Code/me/.gitconfig.profile
     echo -e "\e[1;42m OK \e[0m"
   fi
 
   if ask_question 'Add configuration profile GitLab in "~/Code/work/"'; then
-    ln -sf ~/.dotfiles/git/profiles/gitconfig.gitlab.profile ~/Code/work/.gitconfig.profile
+    ln -sf $HOME/.dotfiles/git/profiles/gitconfig.gitlab.profile $HOME/Code/work/.gitconfig.profile
     echo -e "\e[1;42m OK \e[0m"
   fi
 }
@@ -67,7 +71,7 @@ add_ssh_configuration()
 {
   if ask_question 'Add SSH configuration by hostname (GitHub and GitLab)'; then
     mkdir ~/.ssh/github ~/.ssh/gitlab
-    ln -sf ~/.dotfiles/git/git.hosts ~/.ssh/git.hosts
+    ln -sf $HOME/.dotfiles/git/git.hosts $HOME/.ssh/git.hosts
     echo -e "\e[1;42m OK \e[0m"
   fi
 }

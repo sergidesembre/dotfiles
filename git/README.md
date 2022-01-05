@@ -27,28 +27,29 @@ plugins=(git ...)
 If I need to define another custom aliases I can update `gitconfig.aliases` file to write my alias.
 For do this it's necessary create link:
 ```
-ln -sf ~/.dotfiles/git/gitconfig.aliases ~/.gitconfig.aliases
+ln -sf $HOME/.dotfiles/git/gitconfig.aliases $HOME/.gitconfig.aliases
 ```
 
 ## Global git ignore
 In `gitignore.global` file I can define files or folder to ignore when does commit.
 To use the global git ignore we need to create link:
 ```
-ln -sf ~/.dotfiles/git/gitignore.global ~/.gitignore.global
+ln -sf $HOME/.dotfiles/git/gitignore.global $HOME/.gitignore.global
 ```
 
 ## Custom git commit message
 I have a custom git message when commit files where are define the title, description, type of issue or ticket number if it's necessary.
 If I like to use this we need to crete link:
 ```
-ln -sf ~/.dotfiles/git/gitmessage ~/.gitmessage
+ln -sf $HOME/.dotfiles/git/gitmessage $HOME/.gitmessage
 ```
 When I write the commit message I like to set the title or type of issue correctly, so I created some rules in `gitcommit.nanorc` (only 
 for nano editor) to hightlight with colors if it's wrong or ok the message.
 To add this configuration in own nano editor needs to do the next steps (ensure you exist folders):
 ```
-ln -sf ~/.dotfiles/git/editor/nano/gitmessage.nanorc ~/.config/nano/gitmessage.nanorc
-echo 'include ~/.config/nano/gitmessage.nanorc' >> ~/.config/nano/.nanorc
+mkdir $HOME/.config/nano
+ln -sf $HOME/.dotfiles/git/editor/nano/gitmessage.nanorc $HOME/.config/nano/gitmessage
+echo "include $HOME/.config/nano/gitmessage" >> $HOME/.nanorc
 ```
 
 ## Git configuration for multiple profiles
@@ -60,8 +61,8 @@ my `gitconfig` file to use different profiles by folder:
 This configuration is completely free to change profiles or folders where define the profiles. To set what profile to use in specific folder
 only need to create link to profile and ensure folders are exist:
 ```
-ln -sf ~/.dotfiles/git/profiles/gitconfig.github.profile ~/Code/me/.gitconfig.profile
-ln -sf ~/.dotfiles/git/profiles/gitconfig.gitlab.profile ~/Code/work/.gitconfig.profile
+ln -sf $HOME/.dotfiles/git/profiles/gitconfig.github.profile $HOME/Code/me/.gitconfig.profile
+ln -sf $HOME/.dotfiles/git/profiles/gitconfig.gitlab.profile $HOME/Code/work/.gitconfig.profile
 ```
 
 ## SSH file definition by hostname
@@ -70,7 +71,7 @@ hostname we use different folder where are set the SSH key.
 Feel free to change hosts configuration, but you need to ensure folders where store SSH keys already exist:
 ```
 mkdir ~/.ssh/github ~/.ssh/gitlab
-ln -sf ~/.dotfiles/git/git.hosts ~/.ssh/git.hosts
+ln -sf $HOME/.dotfiles/git/git.hosts $HOME/.ssh/git.hosts
 ```
 
 ## How to use GPG
@@ -91,5 +92,5 @@ Here I can find more info about this: [https://docs.github.com/en/authentication
 ## Run script
 I created script to automate all this explained steps.
 ```
-bash ./install.sh
+sh ./install.sh
 ```
