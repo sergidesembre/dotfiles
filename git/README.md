@@ -11,10 +11,10 @@
 * [Run script](#run-script)
 
 ## First step
-Before to start git configuration ensure you are installed git and set my custom configuration `.gitconfig`:
+Before to start git configuration ensure you are installed git and set my custom configuration `gitconfig`:
 ```
 sudo apt install git
-ln -sf ~/.dotfiles/git/.gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/git/gitconfig ~/.gitconfig
 ```
 
 ## Git aliases
@@ -24,24 +24,24 @@ This plugin are installed by default, to enable only need to add the `git` plugi
 plugins=(git ...)
 ```
 
-If I need to define another custom aliases I can update `.gitconfig.aliases` file to write my alias.
+If I need to define another custom aliases I can update `gitconfig.aliases` file to write my alias.
 For do this it's necessary create link:
 ```
-ln -sf ~/.dotfiles/git/.gitconfig.aliases ~/.gitconfig.aliases
+ln -sf ~/.dotfiles/git/gitconfig.aliases ~/.gitconfig.aliases
 ```
 
 ## Global git ignore
-In `.gitignore.global` file I can define files or folder to ignore when does commit.
+In `gitignore.global` file I can define files or folder to ignore when does commit.
 To use the global git ignore we need to create link:
 ```
-ln -sf ~/.dotfiles/git/.gitignore.global ~/.gitignore.global
+ln -sf ~/.dotfiles/git/gitignore.global ~/.gitignore.global
 ```
 
 ## Custom git commit message
 I have a custom git message when commit files where are define the title, description, type of issue or ticket number if it's necessary.
 If I like to use this we need to crete link:
 ```
-ln -sf ~/.dotfiles/git/.gitmessage ~/.gitmessage
+ln -sf ~/.dotfiles/git/gitmessage ~/.gitmessage
 ```
 When I write the commit message I like to set the title or type of issue correctly, so I created some rules in `gitcommit.nanorc` (only 
 for nano editor) to hightlight with colors if it's wrong or ok the message.
@@ -53,15 +53,15 @@ echo 'include ~/.config/nano/gitmessage.nanorc' >> ~/.config/nano/.nanorc
 
 ## Git configuration for multiple profiles
 Ok! In my case I will like to use different git accounts depends the project (personal or company), fot this reason I set configured 
-my `.gitconfig` file to use different profiles by folder:
-* `~/Code/me` (personal projects) -> `.gitconfig.github.profile`
-* `~/Code/work` (projects from my job) -> `.gitconfig.gitlab.profile`
+my `gitconfig` file to use different profiles by folder:
+* `~/Code/me` (personal projects) -> `gitconfig.github.profile`
+* `~/Code/work` (projects from my job) -> `gitconfig.gitlab.profile`
 
 This configuration is completely free to change profiles or folders where define the profiles. To set what profile to use in specific folder
 only need to create link to profile and ensure folders are exist:
 ```
-ln -sf ~/.dotfiles/git/profiles/.gitconfig.github.profile ~/Code/me/.gitconfig.profile
-ln -sf ~/.dotfiles/git/profiles/.gitconfig.gitlab.profile ~/Code/work/.gitconfig.profile
+ln -sf ~/.dotfiles/git/profiles/gitconfig.github.profile ~/Code/me/.gitconfig.profile
+ln -sf ~/.dotfiles/git/profiles/gitconfig.gitlab.profile ~/Code/work/.gitconfig.profile
 ```
 
 ## SSH file definition by hostname
@@ -84,7 +84,7 @@ Use next command to list the long form of the GPG keys for which you have both a
 ```
 gpg --list-secret-keys --keyid-format=long
 ```
-Remember to sign commits with GPG you need change value from `gpgsign` to `true` from `.gitconfig` file.
+Remember to sign commits with GPG you need change value from `gpgsign` to `true` from `gitconfig` file.
 
 Here I can find more info about this: [https://docs.github.com/en/authentication/managing-commit-signature-verification](https://docs.github.com/en/authentication/managing-commit-signature-verification)
 
