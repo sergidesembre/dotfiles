@@ -82,6 +82,3 @@
 
 [includeIf "gitdir:~/Code/work/"]
     path = ~/Code/work/.gitconfig.profile
-
-# [includeIf "gitdir:~/.dotfiles/"]
-#     path = ~/.dotfiles/git/profiles/gitconfig.github.profile
