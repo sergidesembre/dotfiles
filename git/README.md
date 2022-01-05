@@ -1,15 +1,28 @@
 # Dotfile git configuration
 
 ## Resume
+* [First step](#first-step)
 * [Git aliases](#git-aliases)
 * [Global git ignore](#global-git-ignore)
 * [Custom git commit message](#custom-git-commit-message)
 * [Git configuration for multiple profiles (GitHub, GitLab, Bitbucket, ...)](#git-configuration-for-multiple-profiles)
 * [SSH file definition by hostname](#ssh-file-definition-by-hostname)
 * [How to use GPG](#how-to-use-gpg)
+* [Run script](#run-script)
+
+## First step
+Before to start git configuration ensure you are installed git and set my custom configuration `.gitconfig`:
+```
+sudo apt install git
+ln -sf ~/.dotfiles/git/.gitconfig ~/.gitconfig
+```
 
 ## Git aliases
-For git I usually use the aliases from [plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git) of oh-my-zsh.
+For git I usually use the aliases from [plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git) of oh-my-zsh. 
+This plugin are installed by default, to enable only need to add the `git` plugin into my `.zshrc` file:
+```
+plugins=(git ...)
+```
 
 If I need to define another custom aliases I can update `.gitconfig.aliases` file to write my alias.
 For do this it's necessary create link:
@@ -74,3 +87,9 @@ gpg --list-secret-keys --keyid-format=long
 Remember to sign commits with GPG you need change value from `gpgsign` to `true` from `.gitconfig` file.
 
 Here I can find more info about this: [https://docs.github.com/en/authentication/managing-commit-signature-verification](https://docs.github.com/en/authentication/managing-commit-signature-verification)
+
+## Run script
+I created script to automate all this explained steps.
+```
+bash ./install.sh
+```
