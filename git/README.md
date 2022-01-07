@@ -14,7 +14,7 @@
 Before to start git configuration ensure you are installed git and set my custom configuration `gitconfig`:
 ```
 sudo apt install git
-ln -sf ~/.dotfiles/git/gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/git/gitconfig ~/.config/git/gitconfig
 ```
 
 ## Git aliases
@@ -27,21 +27,21 @@ plugins=(git ...)
 If I need to define another custom aliases I can update `gitconfig.aliases` file to write my alias.
 For do this it's necessary create link:
 ```
-ln -sf $HOME/.dotfiles/git/gitconfig.aliases $HOME/.gitconfig.aliases
+ln -sf $HOME/.dotfiles/git/gitconfig.aliases $HOME/.config/git/gitconfig.aliases
 ```
 
 ## Global git ignore
-In `gitignore.global` file I can define files or folder to ignore when does commit.
+In `gitconfig.ignore` file I can define files or folder to ignore when does commit.
 To use the global git ignore we need to create link:
 ```
-ln -sf $HOME/.dotfiles/git/gitignore.global $HOME/.gitignore.global
+ln -sf $HOME/.dotfiles/git/gitconfig.ignore $HOME/.config/git/gitconfig.ignore
 ```
 
 ## Custom git commit message
 I have a custom git message when commit files where are define the title, description, type of issue or ticket number if it's necessary.
 If I like to use this we need to crete link:
 ```
-ln -sf $HOME/.dotfiles/git/gitmessage $HOME/.gitmessage
+ln -sf $HOME/.dotfiles/git/gitconfig.message $HOME/.config/git/gitconfig.message
 ```
 When I write the commit message I like to set the title or type of issue correctly, so I created some rules in `gitcommit.nanorc` (only 
 for nano editor) to hightlight with colors if it's wrong or ok the message.
@@ -71,7 +71,7 @@ hostname we use different folder where are set the SSH key.
 Feel free to change hosts configuration, but you need to ensure folders where store SSH keys already exist:
 ```
 mkdir ~/.ssh/github ~/.ssh/gitlab
-ln -sf $HOME/.dotfiles/git/git.hosts $HOME/.ssh/git.hosts
+ln -sf $HOME/.dotfiles/git/ssh/hosts.config $HOME/.ssh/git.hosts
 ```
 
 ## How to use GPG

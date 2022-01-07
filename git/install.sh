@@ -21,7 +21,7 @@ install_git()
 set_custom_configuration()
 {
   if ask_question 'Set custom git configuration'; then
-    ln -sf $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
+    ln -sf $HOME/.dotfiles/git/gitconfig $HOME/.config/git/gitconfig
     echo -e "\e[1;42m OK \e[0m"
   fi
 }
@@ -29,7 +29,7 @@ set_custom_configuration()
 add_custom_aliases()
 {
   if ask_question 'Add custom aliases'; then
-    ln -sf $HOME/.dotfiles/git/gitconfig.aliases $HOME/.gitconfig.aliases
+    ln -sf $HOME/.dotfiles/git/gitconfig.aliases $HOME/.config/git/gitconfig.aliases
     echo -e "\e[1;42m OK \e[0m"
   fi
 }
@@ -37,7 +37,7 @@ add_custom_aliases()
 add_global_ignore()
 {
   if ask_question 'Add global ignore files'; then
-    ln -sf $HOME/.dotfiles/git/gitignore.global $HOME/.gitignore.global
+    ln -sf $HOME/.dotfiles/git/gitconfig.ignore $HOME/.config/git/gitconfig.ignore
     echo -e "\e[1;42m OK \e[0m"
   fi
 }
@@ -45,8 +45,8 @@ add_global_ignore()
 add_custom_commit_message()
 {
   if ask_question 'Add custom commit message'; then
-    mkdir $HOME/.config/nano
-    ln -sf $HOME/.dotfiles/git/gitmessage $HOME/.gitmessage
+    mkdir -p $HOME/.config/nano
+    ln -sf $HOME/.dotfiles/git/gitconfig.message $HOME/.config/git/gitconfig.message
     ln -sf $HOME/.dotfiles/git/editor/nano/gitmessage.nanorc $HOME/.config/nano/gitmessage
     echo "include $HOME/.config/nano/gitmessage" >> $HOME/.nanorc
 
@@ -70,8 +70,8 @@ add_configuration_profile()
 add_ssh_configuration()
 {
   if ask_question 'Add SSH configuration by hostname (GitHub and GitLab)'; then
-    mkdir ~/.ssh/github ~/.ssh/gitlab
-    ln -sf $HOME/.dotfiles/git/git.hosts $HOME/.ssh/git.hosts
+    mkdir -p ~/.ssh/github ~/.ssh/gitlab
+    ln -sf $HOME/.dotfiles/git/ssh/hosts.config $HOME/.ssh/git.hosts
     echo -e "\e[1;42m OK \e[0m"
   fi
 }
@@ -79,6 +79,8 @@ add_ssh_configuration()
 ###
 # Starts here
 ###
+mkdir -p $HOME/.config/git
+
 install_git
 set_custom_configuration
 add_custom_aliases

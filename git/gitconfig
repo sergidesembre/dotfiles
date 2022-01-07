@@ -29,7 +29,7 @@
     trustctime = false
     precomposeunicode = false
     whitespace = trailing-space,space-before-tab
-    excludesfile = ~/.gitignore.global
+    excludesfile = ~/.config/git/gitconfig.ignore
 
 [help]
     autocorrect = 1
@@ -37,14 +37,11 @@
 [apply]
     whitespace = fix
 
-[github]
-    user = sergidesembre
-
 [push]
     default = current
 
 [commit]
-    template = ~/.gitmessage
+    template = ~/.config/git/gitconfig.message
     gpgsign = false
 
 [sendemail]
@@ -72,7 +69,7 @@
     whitespace = fix
 
 [include]
-    path = ~/.gitconfig.aliases
+    path = ~/.config/git/gitconfig.aliases
 
 [gpg]
     program = gpg2
