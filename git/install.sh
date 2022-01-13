@@ -57,11 +57,13 @@ add_custom_commit_message()
 add_configuration_profile()
 {
   if ask_question 'Add configuration profile GitHub in "~/Code/me/"'; then
+    mkdir -p $HOME/Code/me
     ln -sf $HOME/.dotfiles/git/profiles/gitconfig.github.profile $HOME/Code/me/.gitconfig.profile
     echo -e "\e[1;42m OK \e[0m"
   fi
 
   if ask_question 'Add configuration profile GitLab in "~/Code/work/"'; then
+    mkdir -p $HOME/Code/work
     ln -sf $HOME/.dotfiles/git/profiles/gitconfig.gitlab.profile $HOME/Code/work/.gitconfig.profile
     echo -e "\e[1;42m OK \e[0m"
   fi
