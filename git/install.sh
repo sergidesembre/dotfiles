@@ -21,7 +21,7 @@ install_git()
 set_custom_configuration()
 {
   if ask_question 'Set custom git configuration'; then
-    ln -sf $HOME/.dotfiles/git/gitconfig $HOME/.config/git/gitconfig
+    ln -sf $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
     echo -e "\e[1;42m OK \e[0m"
   fi
 }

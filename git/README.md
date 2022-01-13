@@ -14,7 +14,7 @@
 Before to start git configuration ensure you are installed git and set my custom configuration `gitconfig`:
 ```
 sudo apt install git
-ln -sf ~/.dotfiles/git/gitconfig ~/.config/git/gitconfig
+ln -sf ~/.dotfiles/git/gitconfig ~/.gitconfig
 ```
 
 ## Git aliases
