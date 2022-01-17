@@ -1,0 +1,8 @@
+#!/bin/bash
+
+alias cpdm=_copy_default_makefile
+
+function _copy_default_makefile() {
+    current_dir=$(pwd)
+    cp ~/.dotfiles/development/languages/php/makefile $current_dir/Makefile
+}
