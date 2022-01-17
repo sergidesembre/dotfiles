@@ -1,6 +1,10 @@
 # IntelliJ IDEA
 .idea
 
+# PHP projects
+/vendor/
+.phpunit.result.cache
+
 # Custom
 .no-commit
 

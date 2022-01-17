@@ -5,8 +5,7 @@ syntax "patch" ".git/COMMIT_EDITMSG$"
 color brightred "^.{50,}.+$"
 
 # KDE commit hook keywords, see: http://community.kde.org/Sysadmin/GitKdeOrgManual#Commit_hook_keywords
-color yellow "^.(TYPE ISSUE|FEATURE|BUG|CCBUG|FIXED-IN|CCMAIL|REVIEW|GUI|DIGEST).:.*$"
-color yellow "(SVN_SILENT|GIT_SILENT|SVN_MERGE)"
+color yellow "^.(TYPE ISSUE|FEATURE|BUG|FIXED-IN|REVIEW).:.*$"
 
 # comment
 color blue "^#.*$"
