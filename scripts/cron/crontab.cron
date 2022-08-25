@@ -1,0 +1,5 @@
+# At 09:00 on Monday
+0 9 * * 1 exec bin/sh ~/.dotfiles/scripts/cron/crontask/empty-temporal-files.sh
+
+# At 09:00
+0 9 * * * exec bin/sh ~/.dotfiles/scripts/cron/crontask/remove-old-files.sh

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm -rf ~/Code/me/tmp/*
-rm -rf ~/Code/work/tmp/*
+rm -rf ${HOME}/Code/me/tmp/*
+rm -rf ${HOME}/Code/work/tmp/*

@@ -21,7 +21,7 @@ function createSymbolicLinks()
 function scheduleCrontabTasks()
 {
     display '📅  \e[32mScheduling crontab tasks\e[0m'
-    crontab ${DOTFILES_SCRIPTS_PATH}/cron.txt
+    . ${DOTFILES_SCRIPTS_PATH}/cron/install.sh
 }
 
 function generateSshKeys()
@@ -55,8 +55,6 @@ function menu()
     echo -e '   \e[32m./install.sh app\e[0m  - install default appliations'
     echo -e '\e[33;1mSSH keys usage:\e[0m'
     . ${DOTFILES_SCRIPTS_PATH}/ssh.sh
-    echo -e '\e[33;1mCrons usage:\e[0m'
-    . ${DOTFILES_SCRIPTS_PATH}/cron.sh
 
 }
 

@@ -1,1 +1,0 @@
-0 0 * * 0 exec bin/sh ~/.dotfiles/scripts/cron/crontask/empty-temporal-task.sh
