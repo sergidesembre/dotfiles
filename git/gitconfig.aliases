@@ -1,1 +1,2 @@
 [alias]
+    bdel = "!bash ~/.dotfiles/git/branch-deleter.sh"
