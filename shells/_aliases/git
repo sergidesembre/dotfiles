@@ -1,0 +1,3 @@
+#!/bin/bash
+
+alias gbdel='git bdel' # bdel is a custom alias from 'git' folder
