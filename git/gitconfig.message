@@ -1,8 +1,14 @@
-# Subject line (try to keep under 50 characters)
+# Title line (try to keep under 50 characters)
+# Types of issue: feat|fix|docs|style|refactor|test|chore|perf|security
+# OPTIONAL - To define more context fast you can write a keyword between
+# parentheses (parse, api, lang, etc) and use "!" character after if
+# commit is urgent or important with possible breaking change.
+# EX: feat(criteo)!: disables pixel tracking for all countries
 
 
-# Types of issue: FEATURE|BUG|FIXED-IN|REVIEW
-# Multi-line description of commit,
-[TYPE ISSUE]: Feel free to be detailed.
+# OPTIONAL - Multi-line body description (under 72 characters/line)
 
-[Ticket: X]
+
+# OPTIONAL - Footer, you can refer extra data as reviewers, links,
+# references, who ask the task, etc...
+
