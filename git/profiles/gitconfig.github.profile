@@ -6,5 +6,8 @@
 [github]
     user = sergidesembre
 
+[url "me.github.com:"]
+    insteadOf = git@github.com:
+
 [commit]
     gpgsign = false

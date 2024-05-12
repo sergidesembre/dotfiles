@@ -73,7 +73,7 @@ add_ssh_configuration()
 {
   if ask_question 'Add SSH configuration by hostname (GitHub and GitLab)'; then
     mkdir -p ~/.ssh/github ~/.ssh/gitlab
-    ln -sf $HOME/.dotfiles/git/ssh/hosts.config $HOME/.ssh/git.hosts
+    ln -sf $HOME/.dotfiles/git/ssh/hosts.config $HOME/.ssh/config
     echo -e "\e[1;42m OK \e[0m"
   fi
 }
