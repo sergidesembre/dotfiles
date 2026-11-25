@@ -12,6 +12,7 @@ cask "iterm2"              # terminal
 cask "docker-desktop"      # Docker + Docker Compose + aplicación gráfica
 cask "jetbrains-toolbox"   # gestor de IDEs de JetBrains (PhpStorm, IntelliJ…)
 cask "claude"              # Claude Desktop
+cask "claude-code"         # Claude Code (comando claude en la terminal)
 
 cask "slack"               # mensajería del trabajo
 cask "whatsapp"            # WhatsApp de escritorio

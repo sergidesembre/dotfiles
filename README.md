@@ -12,7 +12,7 @@ Configuración para dejar un Mac (chip Apple) listo desde cero: herramientas, ap
 3. Clona el repositorio **en esta ruta exacta** (la usan `.zshrc` y `gitconfig`):
    ```bash
    mkdir -p ~/Developer/personal
-   git clone https://github.com/<usuario>/dotfiles.git ~/Developer/personal/dotfiles
+   git clone https://github.com/sergidesembre/dotfiles.git ~/Developer/personal/dotfiles
    ```
    > Si el repositorio es **privado**: en este punto todavía no hay SSH (1Password no está instalado), así que git pedirá tu usuario de GitHub y, como contraseña, un *personal access token* (créalo en GitHub → *Settings → Developer settings → Personal access tokens*).
 4. Ejecuta el instalador:
