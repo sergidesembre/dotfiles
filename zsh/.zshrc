@@ -7,11 +7,14 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Variables de entorno del trabajo (solo local, fuera de git)
 [ -f "$DOTFILES/work/env.zsh" ] && source "$DOTFILES/work/env.zsh"
 
+# nvm (gestor de versiones de Node; lo carga el plugin nvm de Oh My Zsh)
+export NVM_DIR="$HOME/.nvm"
+
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="oxide"
 HIST_STAMPS="yyyy/mm/dd"
-plugins=(git docker docker-compose zsh-autosuggestions zsh-syntax-highlighting)   # syntax-highlighting siempre el último
+plugins=(git docker docker-compose nvm zsh-autosuggestions zsh-syntax-highlighting)   # syntax-highlighting siempre el último
 source "$ZSH/oh-my-zsh.sh"
 
 # Composer: binarios globales

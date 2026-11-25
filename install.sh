@@ -33,7 +33,8 @@ ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 # 5. Tema oxide
 ln -sf "$DOTFILES/zsh/themes/oxide.zsh-theme" "$ZSH_CUSTOM/themes/oxide.zsh-theme"
 
-# 6. Carpeta del trabajo (fuera de git)
+# 6. Carpetas locales: nvm y trabajo (fuera de git)
+mkdir -p "$HOME/.nvm"
 mkdir -p "$DOTFILES/work/aliases"
 touch "$DOTFILES/work/env.zsh"
 

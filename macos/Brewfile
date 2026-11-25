@@ -4,6 +4,7 @@
 brew "php"        # última versión estable de PHP
 brew "composer"   # gestor de paquetes de PHP
 brew "node"       # Node.js, incluye npm
+brew "nvm"        # gestor de versiones de Node
 brew "nano"       # nano real (el de macOS es pico y no admite colores)
 brew "mas"        # instalar apps de la Mac App Store desde la terminal
 

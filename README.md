@@ -34,7 +34,7 @@ Configuración para dejar un Mac (chip Apple) listo desde cero: herramientas, ap
 | 3 | Instala Oh My Zsh |
 | 4 | Descarga los plugins `zsh-autosuggestions` y `zsh-syntax-highlighting` |
 | 5 | Enlaza el tema `oxide` |
-| 6 | Crea `work/aliases/` y `work/env.zsh` |
+| 6 | Crea `~/.nvm`, `work/aliases/` y `work/env.zsh` |
 | 7 | Enlaza `~/.zshrc` → `zsh/.zshrc` |
 | 8 | Enlaza `~/.gitconfig` → `git/gitconfig` y crea los perfiles de git |
 | 9 | Activa los colores de nano para los commits |
