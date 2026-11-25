@@ -1,0 +1,16 @@
+# Parar todos los contenedores
+dstop() { docker stop $(docker ps -aq); }
+
+# Borrar todos los contenedores
+dremove() { docker rm $(docker ps -aq); }
+
+# Entrar en un contenedor por nombre: dexec <nombre>
+dexec() { docker exec -it $(docker ps -aqf "name=$1") bash; }
+
+# Listado de contenedores más limpio
+# (se quita antes el alias dps del plugin docker de Oh My Zsh, que tiene el mismo nombre)
+unalias dps 2>/dev/null
+dps() { docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}"; }
+
+# Borrar TODO: contenedores, imágenes, volúmenes y redes
+dbomb() { docker system prune -a --volumes -f; }

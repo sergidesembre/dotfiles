@@ -1,0 +1,4 @@
+# Configuración SSH (se enlaza a ~/.ssh/config)
+# Las claves viven en 1Password; su agente las sirve a ssh.
+Host *
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

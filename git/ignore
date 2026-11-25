@@ -1,0 +1,19 @@
+# IntelliJ IDEA
+.idea
+
+# PHP projects
+/vendor/
+.phpunit.result.cache
+
+# Custom
+.no-commit
+.gitconfig.profile
+
+# Text editors
+*.swp
+
+# Always ignore
+.DS_Store
+Thumbs.db
+*.diff
+*.dat

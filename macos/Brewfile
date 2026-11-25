@@ -1,0 +1,21 @@
+# Herramientas que se instalan con Homebrew
+# Uso: brew bundle --file=macos/Brewfile
+
+brew "php"        # última versión estable de PHP
+brew "composer"   # gestor de paquetes de PHP
+brew "node"       # Node.js, incluye npm
+brew "nano"       # nano real (el de macOS es pico y no admite colores)
+brew "mas"        # instalar apps de la Mac App Store desde la terminal
+
+cask "1password"           # gestor de contraseñas y agente SSH
+cask "iterm2"              # terminal
+cask "docker-desktop"      # Docker + Docker Compose + aplicación gráfica
+cask "jetbrains-toolbox"   # gestor de IDEs de JetBrains (PhpStorm, IntelliJ…)
+cask "claude"              # Claude Desktop
+
+cask "slack"               # mensajería del trabajo
+cask "whatsapp"            # WhatsApp de escritorio
+cask "spotify"             # música
+
+# Mac App Store (requiere haber iniciado sesión en la App Store)
+mas "Monosnap", id: 540348655   # capturas de pantalla y vídeos

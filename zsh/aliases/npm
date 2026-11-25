@@ -1,0 +1,22 @@
+# Instalar y desinstalar
+alias ni='npm install'
+alias nid='npm install --save-dev'     # dependencia de desarrollo
+alias nig='npm install --global'       # paquete global
+alias nci='npm ci'                     # instalación limpia desde package-lock.json
+alias nun='npm uninstall'
+
+# Ejecutar scripts de package.json
+alias nr='npm run'                     # nr <script>
+alias nrd='npm run dev'
+alias nrb='npm run build'
+alias ns='npm start'
+alias nt='npm test'
+
+# Mantenimiento
+alias nout='npm outdated'              # dependencias con versión nueva
+alias nup='npm update'
+alias nls='npm ls --depth=0'           # dependencias directas del proyecto
+alias nlsg='npm ls --global --depth=0' # paquetes globales instalados
+
+# npx
+alias nx='npx'

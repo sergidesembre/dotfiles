@@ -1,0 +1,1 @@
+alias gacp='git add --all :/ && git commit && git push'   # añadir todo, commit y push
