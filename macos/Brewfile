@@ -7,6 +7,7 @@ brew "node"       # Node.js, incluye npm
 brew "nvm"        # gestor de versiones de Node
 brew "nano"       # nano real (el de macOS es pico y no admite colores)
 brew "mas"        # instalar apps de la Mac App Store desde la terminal
+brew "gh"         # CLI de GitHub (repos, pull requests, issues…)
 
 cask "1password"           # gestor de contraseñas y agente SSH
 cask "iterm2"              # terminal
