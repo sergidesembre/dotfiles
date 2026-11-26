@@ -34,12 +34,13 @@ Configuración para dejar un Mac (chip Apple) listo desde cero: herramientas, ap
 | 3 | Instala Oh My Zsh |
 | 4 | Descarga los plugins `zsh-autosuggestions` y `zsh-syntax-highlighting` |
 | 5 | Enlaza el tema `oxide` |
-| 6 | Crea `~/.nvm`, `work/aliases/` y `work/env.zsh` |
+| 6 | Crea `~/.nvm`, `work/aliases/`, `work/env.zsh` y `work/hosts` |
 | 7 | Enlaza `~/.zshrc` → `zsh/.zshrc` |
 | 8 | Enlaza `~/.gitconfig` → `git/gitconfig` y crea los perfiles de git |
 | 9 | Activa los colores de nano para los commits |
 | 10 | Enlaza `~/.ssh/config` (usa el agente SSH de 1Password) |
 | 11 | Aplica los ajustes de macOS de `macos/defaults.sh` |
+| 12 | Aplica los hosts personales y del trabajo en `/etc/hosts` |
 
 ## Pasos manuales después de instalar
 
@@ -82,6 +83,9 @@ dotfiles/
 │   ├── message         plantilla de commit
 │   └── gitmessage.nanorc  colores de nano para los commits
 ├── ssh/config          configuración SSH (agente de 1Password)
+├── hosts/
+│   ├── personal        dominios personales para /etc/hosts
+│   └── apply.sh        aplica los hosts en /etc/hosts
 └── work/               solo local, ignorado por git
 ```
 
@@ -91,6 +95,22 @@ dotfiles/
 
 - `work/env.zsh`: variables de entorno (`export MI_VARIABLE="valor"`).
 - `work/aliases/`: cualquier archivo aquí se carga como aliases.
+- `work/hosts`: dominios del trabajo para `/etc/hosts` (ver [Hosts](#hosts-etchosts)).
+
+## Hosts (`/etc/hosts`)
+
+Los dominios se añaden en dos archivos, con el formato normal de hosts (`IP  dominio`):
+
+- `hosts/personal`: dominios personales (se sube a git).
+- `work/hosts`: dominios del trabajo (solo local).
+
+Después de editarlos, aplícalos con:
+
+```bash
+hostsup
+```
+
+El script escribe un bloque entre `# >>> dotfiles >>>` y `# <<< dotfiles <<<` en `/etc/hosts`, sin tocar el resto del archivo. Pide la contraseña de macOS, guarda una copia en `/etc/hosts.bak` y limpia la caché DNS.
 
 ## Perfiles de git
 

@@ -17,3 +17,4 @@
 Thumbs.db
 *.diff
 *.dat
+**/.claude/settings.local.json

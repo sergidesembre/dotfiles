@@ -1,0 +1,3 @@
+# Hosts personales (se aplican con hostsup o ./hosts/apply.sh)
+# IP          dominio
+# 127.0.0.1   miapp.test

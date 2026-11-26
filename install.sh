@@ -36,7 +36,7 @@ ln -sf "$DOTFILES/zsh/themes/oxide.zsh-theme" "$ZSH_CUSTOM/themes/oxide.zsh-them
 # 6. Carpetas locales: nvm y trabajo (fuera de git)
 mkdir -p "$HOME/.nvm"
 mkdir -p "$DOTFILES/work/aliases"
-touch "$DOTFILES/work/env.zsh"
+touch "$DOTFILES/work/env.zsh" "$DOTFILES/work/hosts"
 
 # 7. Enlazar .zshrc
 ln -sf "$DOTFILES/zsh/.zshrc" "$HOME/.zshrc"
@@ -67,5 +67,8 @@ ln -sf "$DOTFILES/ssh/config" "$HOME/.ssh/config"
 
 # 11. Ajustes de macOS
 bash "$DOTFILES/macos/defaults.sh"
+
+# 12. Hosts personales y del trabajo en /etc/hosts
+bash "$DOTFILES/hosts/apply.sh"
 
 echo "✅ Listo. Abre una terminal nueva."

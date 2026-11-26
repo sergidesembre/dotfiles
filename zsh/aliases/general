@@ -3,6 +3,9 @@ alias ll='ls -lh'
 alias la='ls -lah'
 alias lsd='ls -lh | grep --color=never "^d"'   # solo carpetas
 
+# Enlaces simbólicos: lns <origen> <enlace>
+alias lns='ln -sv'
+
 # Subir carpetas
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -20,6 +23,7 @@ alias install='brew install'
 alias remove='brew uninstall'
 alias brewup='brew update && brew upgrade && brew cleanup'   # actualizar todo lo de Homebrew
 alias reload='omz reload'                                    # recargar la configuración de zsh
+alias hostsup='$DOTFILES/hosts/apply.sh'                     # aplicar hosts personales y del trabajo en /etc/hosts
 alias m='make'
 alias c='clear'
 alias h='history'
