@@ -53,8 +53,16 @@ Configuración para dejar un Mac (chip Apple) listo desde cero: herramientas, ap
 
   > ⚠️ Si diste una clave de firma en el instalador, **los commits fallarán** (error de `op-ssh-sign`) hasta que 1Password esté abierto con el agente SSH activado.
 - **Docker Desktop**: ábrelo una vez y acepta las condiciones; hasta entonces `docker` no funciona.
-- **JetBrains Toolbox**: inicia sesión e instala los IDEs que necesites.
+- **JetBrains Toolbox**: inicia sesión e instala los IDEs que necesites (ver [Configuración del IDE](#configuración-del-ide-webstorm)).
 - **iTerm2, Slack, WhatsApp, Spotify, Claude, Monosnap**: abrir e iniciar sesión.
+
+## Configuración del IDE (WebStorm)
+
+1. Abre **JetBrains Toolbox**, inicia sesión con tu cuenta de JetBrains e instala **WebStorm**.
+2. Abre WebStorm y ve a *Settings → Plugins → Marketplace*.
+3. Busca **Kanagawa Theme** ([página del plugin](https://plugins.jetbrains.com/plugin/19539-kanagawa-theme)) y pulsa *Install*.
+4. Ve a *Settings → Appearance & Behavior → Appearance → Theme* y elige **Kanagawa**.
+5. Comprueba en *Settings → Editor → Color Scheme* que el esquema del editor también es **Kanagawa** (si no, selecciónalo ahí).
 
 ## Estructura
 
