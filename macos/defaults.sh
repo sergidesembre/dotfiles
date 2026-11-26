@@ -11,6 +11,9 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock orientation -string "right"
 defaults write com.apple.dock tilesize -int 40   # tamaño de los iconos (por defecto 48)
 
+# Spaces (escritorios): mantener el orden fijo, no reordenar según el uso
+defaults write com.apple.dock mru-spaces -bool false
+
 # Finder: mostrar siempre los archivos ocultos (los que empiezan por ".")
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
